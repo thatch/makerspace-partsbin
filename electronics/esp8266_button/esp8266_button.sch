@@ -28,9 +28,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:ESP8266
 LIBS:switches
-LIBS:zeropin
-LIBS:esp8266_button-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -114,15 +113,15 @@ $EndComp
 $Comp
 L SW_Push SW1
 U 1 1 59686E64
-P 3200 3450
-F 0 "SW1" H 3250 3550 50  0000 L CNN
-F 1 "SW_Push" H 3200 3390 50  0000 C CNN
-F 2 "Buttons_Switches_THT:SW_PUSH_6mm" H 3200 3650 50  0001 C CNN
-F 3 "" H 3200 3650 50  0001 C CNN
-	1    3200 3450
+P 2150 5100
+F 0 "SW1" H 2200 5200 50  0000 L CNN
+F 1 "SW_Push" H 2150 5040 50  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm" H 2150 5300 50  0001 C CNN
+F 3 "" H 2150 5300 50  0001 C CNN
+	1    2150 5100
 	0    -1   -1   0   
 $EndComp
-Text Notes 2900 1650 0    60   ~ 0
+Text Notes 2400 1750 0    60   ~ 0
 Based on\nhttps://hackaday.io/project/12866-esp8266-power-latch
 $Comp
 L Q_NMOS_GSD Q2
@@ -183,15 +182,9 @@ Wire Wire Line
 	5400 2450 5400 2550
 Wire Wire Line
 	3500 3650 3500 3850
-Wire Wire Line
-	3200 3650 3200 3750
-Wire Wire Line
-	3200 3750 3900 3750
 Connection ~ 3500 3750
 Wire Wire Line
-	3200 3250 3200 3150
-Wire Wire Line
-	3200 3150 3500 3150
+	3500 3150 3100 3150
 Wire Wire Line
 	3500 2750 3500 3250
 Connection ~ 3500 3150
@@ -488,23 +481,22 @@ Text GLabel 6700 2800 1    60   Input ~ 0
 BATTMON
 Wire Wire Line
 	6700 2800 6700 2900
-Text GLabel 7500 3650 0    60   Input ~ 0
+Text GLabel 7400 3650 0    60   Input ~ 0
 RESET
 Wire Wire Line
-	7500 3650 7600 3650
-Text GLabel 7500 3850 0    60   Input ~ 0
+	7400 3650 7600 3650
+Text GLabel 7400 3850 0    60   Input ~ 0
 CH_PD
 Wire Wire Line
-	7500 3850 7600 3850
+	7400 3850 7600 3850
 Text GLabel 9500 4050 2    60   Input ~ 0
 GPIO0
 Wire Wire Line
 	9500 4050 9400 4050
-Text GLabel 7500 4150 0    60   Input ~ 0
+Text GLabel 7400 4150 0    60   Input ~ 0
 PWR_LATCH
 Wire Wire Line
-	7500 4150 7600 4150
-NoConn ~ 7600 3950
+	7400 4150 7600 4150
 NoConn ~ 7600 4050
 NoConn ~ 7600 4250
 NoConn ~ 9400 4150
@@ -607,4 +599,89 @@ F 3 "" H 6600 6750 60  0001 C CNN
 	1    6600 6750
 	1    0    0    -1  
 $EndComp
+Text GLabel 3100 3150 0    60   Input ~ 0
+~POWERON
+Wire Wire Line
+	3500 3750 3900 3750
+Text Notes 2100 4450 0    60   ~ 0
+What Should the Big Button Do?
+$Comp
+L GND #PWR017
+U 1 1 596B905A
+P 2150 5400
+F 0 "#PWR017" H 2150 5150 50  0001 C CNN
+F 1 "GND" H 2150 5250 50  0000 C CNN
+F 2 "" H 2150 5400 50  0001 C CNN
+F 3 "" H 2150 5400 50  0001 C CNN
+	1    2150 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 5300 2150 5400
+$Comp
+L Jumper_NO_Small JP2
+U 1 1 596B9151
+P 2550 4850
+F 0 "JP2" H 2550 4930 50  0000 C CNN
+F 1 "Button=PowerOn" H 2560 4790 50  0000 C CNN
+F 2 "SolderJumpers:SJ_1_NO" H 2550 4850 50  0001 C CNN
+F 3 "" H 2550 4850 50  0001 C CNN
+	1    2550 4850
+	1    0    0    -1  
+$EndComp
+Text GLabel 3000 4850 2    60   Output ~ 0
+~POWERON
+$Comp
+L Jumper_NO_Small JP3
+U 1 1 596B936D
+P 3900 2200
+F 0 "JP3" H 3900 2280 50  0000 C CNN
+F 1 "Always On" H 3910 2140 50  0000 C CNN
+F 2 "SolderJumpers:SJ_1_NO" H 3900 2200 50  0001 C CNN
+F 3 "" H 3900 2200 50  0001 C CNN
+	1    3900 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 4850 3000 4850
+Wire Wire Line
+	2450 4850 2150 4850
+Wire Wire Line
+	2150 4650 2150 4900
+Connection ~ 2150 5350
+$Comp
+L Jumper_NO_Small JP1
+U 1 1 596B9749
+P 2550 4650
+F 0 "JP1" H 2550 4730 50  0000 C CNN
+F 1 "Button=Reset" H 2560 4590 50  0000 C CNN
+F 2 "SolderJumpers:SJ_1_NO" H 2550 4650 50  0001 C CNN
+F 3 "" H 2550 4650 50  0001 C CNN
+	1    2550 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4650 2150 4650
+Connection ~ 2150 4850
+Text GLabel 3000 4650 2    60   Output ~ 0
+CH_PD
+Wire Wire Line
+	3000 4650 2650 4650
+Wire Wire Line
+	3800 2200 3600 2200
+Wire Wire Line
+	3600 2200 3600 2450
+Connection ~ 3600 2450
+Wire Wire Line
+	4000 2200 4200 2200
+Wire Wire Line
+	4200 2200 4200 2450
+Connection ~ 4200 2450
+Text Notes 2300 2200 0    60   ~ 0
+If Always On, this subcircuit is\nunnecessary, so DNP\nR1, R3, R5, C4, Q1, Q2
+Wire Wire Line
+	7600 3950 7500 3950
+Wire Wire Line
+	7500 3950 7500 3650
+Connection ~ 7500 3650
 $EndSCHEMATC
