@@ -1,4 +1,4 @@
-update=Fri 14 Jul 2017 04:34:58 PM PDT
+update=Sun 16 Jul 2017 09:35:25 AM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,4 +60,5 @@ LibName28=contrib
 LibName29=valves
 LibName30=/home/tim/kicad/kicad-ESP8266/ESP8266
 LibName31=switches
-LibName32=/usr/local/google/home/thatch/goog/makerspace-emonth/makerspace-partsbin/electronics/_kicad_library/zeropin
+LibName32=../_kicad_library/zeropin
+LibName33=../esp8266_therm/bmp180_breakout
