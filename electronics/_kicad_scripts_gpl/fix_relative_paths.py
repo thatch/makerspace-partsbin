@@ -2,6 +2,10 @@
 """
 Fixes paths used in fp-lib-table and *.pro to be relative, not escaping
 the git tree.
+
+Exit status is:
+    0 = no diffs
+    1 = diffs
 """
 
 import sys
@@ -10,6 +14,7 @@ import re
 import difflib
 
 URI_LINE_RE = re.compile(r'\(uri (/[^\)]+)\)')
+
 
 def diff(f1, f2):
     # This is a decisionmaker for whether a diff exists.
@@ -55,6 +60,7 @@ def fix_path(path, base):
 
 
 def fix_pro(filename, fix):
+    """Returns whether there was a diff."""
     new_contents = []
     with open(filename, 'rb') as fo:
         for line in fo:
@@ -70,12 +76,14 @@ def fix_pro(filename, fix):
     with open(filename + '.new', 'wb') as fo:
         fo.write('\n'.join(new_contents))
     diff_exists = diff(filename, filename + '.new')
-    if diff_exists and fix:
+    if fix == 2 or diff_exists and fix:
         os.rename(filename + '.new', filename)
         print "Renamed", filename + '.new'
+    return diff_exists and 1 or 0
 
 
 def fix_fp_lib(filename, fix):
+    """Returns whether there was a diff."""
     new_contents = []
     with open(filename, 'rb') as fo:
         for line in fo:
@@ -92,30 +100,37 @@ def fix_fp_lib(filename, fix):
     with open(filename + '.new', 'wb') as fo:
         fo.write('\n'.join(new_contents))
     diff_exists = diff(filename, filename + '.new')
-    if diff_exists and fix:
+    if fix == 2 or diff_exists and fix:
         os.rename(filename + '.new', filename)
         print "Renamed", filename + '.new'
+    return diff_exists and 1 or 0
 
 
 def main(filenames):
-    fix_arg = False
+    fix_arg = 0
     if '-f' in filenames:
-        fix_arg = True
+        fix_arg = 1
         del filenames[filenames.index('-f')]
+    elif '-ff' in filenames:
+        fix_arg = 2
+        del filenames[filenames.index('-ff')]
 
+    exit_status = 0
     try:
         for filename in filenames:
             if filename.endswith('.pro'):
-                fix_pro(filename, fix=fix_arg)
+                exit_status |= fix_pro(filename, fix=fix_arg)
             elif filename.endswith('fp-lib-table'):
-                fix_fp_lib(filename, fix=fix_arg)
+                exit_status |= fix_fp_lib(filename, fix=fix_arg)
             else:
                 raise ValueError("Unknown type of", filename)
     except Exception as e:
         print "Error while processing", filename
         raise
 
+    return exit_status
+
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    sys.exit(main(sys.argv[1:]))
 
