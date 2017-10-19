@@ -1,0 +1,308 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:esp32
+LIBS:switcher-toppower
+LIBS:ch340
+LIBS:switches
+LIBS:zeropin
+LIBS:stepup_modules
+LIBS:regulators2
+LIBS:ws2812
+LIBS:esp32_button-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L WROOM32 M401
+U 1 1 59E6A705
+P 5050 3550
+F 0 "M401" H 4600 4700 60  0000 C CNN
+F 1 "WROOM32" H 5050 3550 60  0000 C CNN
+F 2 "ESP32:WROOM32" H 5050 3900 60  0001 C CNN
+F 3 "" H 5050 3900 60  0001 C CNN
+	1    5050 3550
+	1    0    0    -1  
+$EndComp
+Text HLabel 3450 2600 0    60   Input ~ 0
+CHIP_PD
+Text HLabel 6000 3800 2    60   Input ~ 0
+IO0
+Wire Wire Line
+	6000 3800 5800 3800
+$Comp
+L GND #PWR403
+U 1 1 59E6A777
+P 5900 4850
+F 0 "#PWR403" H 5900 4600 50  0001 C CNN
+F 1 "GND" H 5900 4700 50  0000 C CNN
+F 2 "" H 5900 4850 50  0001 C CNN
+F 3 "" H 5900 4850 50  0001 C CNN
+	1    5900 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4300 5900 4850
+Wire Wire Line
+	5900 4300 5800 4300
+Wire Wire Line
+	5800 4400 5900 4400
+Connection ~ 5900 4400
+Wire Wire Line
+	5900 4500 5800 4500
+Connection ~ 5900 4500
+Wire Wire Line
+	5800 4700 5900 4700
+Connection ~ 5900 4700
+Text HLabel 3650 1800 0    60   Input ~ 0
+3V3_IN
+Wire Wire Line
+	3650 1800 6050 1800
+Wire Wire Line
+	5450 1800 5450 1850
+Wire Wire Line
+	5150 2300 5150 1800
+Connection ~ 5150 1800
+$Comp
+L C C404
+U 1 1 59E6A7D2
+P 5450 2000
+F 0 "C404" H 5475 2100 50  0000 L CNN
+F 1 "47u" H 5475 1900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 5488 1850 50  0001 C CNN
+F 3 "" H 5450 2000 50  0001 C CNN
+	1    5450 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR402
+U 1 1 59E6A7EF
+P 5450 2200
+F 0 "#PWR402" H 5450 1950 50  0001 C CNN
+F 1 "GND" H 5450 2050 50  0000 C CNN
+F 2 "" H 5450 2200 50  0001 C CNN
+F 3 "" H 5450 2200 50  0001 C CNN
+	1    5450 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2150 5450 2200
+$Comp
+L R R401
+U 1 1 59E6A875
+P 3900 2200
+F 0 "R401" V 3980 2200 50  0000 C CNN
+F 1 "10k" V 3900 2200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 3830 2200 50  0001 C CNN
+F 3 "" H 3900 2200 50  0001 C CNN
+	1    3900 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2600 4350 2600
+Wire Wire Line
+	3900 2350 3900 2700
+Connection ~ 3900 2600
+Wire Wire Line
+	3900 2050 3900 1800
+Connection ~ 3900 1800
+$Comp
+L C C403
+U 1 1 59E6A905
+P 3900 2850
+F 0 "C403" H 3925 2950 50  0000 L CNN
+F 1 "1u" H 3925 2750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3938 2700 50  0001 C CNN
+F 3 "" H 3900 2850 50  0001 C CNN
+	1    3900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR401
+U 1 1 59E6A979
+P 3900 3050
+F 0 "#PWR401" H 3900 2800 50  0001 C CNN
+F 1 "GND" H 3900 2900 50  0000 C CNN
+F 2 "" H 3900 3050 50  0001 C CNN
+F 3 "" H 3900 3050 50  0001 C CNN
+	1    3900 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3050 3900 3000
+Text HLabel 5950 2800 2    60   Input ~ 0
+TXD
+Text HLabel 5950 2900 2    60   Input ~ 0
+RXD
+Wire Wire Line
+	5950 2900 5800 2900
+Wire Wire Line
+	5800 2800 5950 2800
+NoConn ~ 5800 3100
+Text HLabel 7450 3300 2    60   Input ~ 0
+BATTV
+Wire Wire Line
+	6500 3700 5800 3700
+$Comp
+L R R402
+U 1 1 59E6EB66
+P 6500 3500
+F 0 "R402" V 6580 3500 50  0000 C CNN
+F 1 "10k" V 6500 3500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6430 3500 50  0001 C CNN
+F 3 "" H 6500 3500 50  0001 C CNN
+	1    6500 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R403
+U 1 1 59E6EB8E
+P 6500 3900
+F 0 "R403" V 6580 3900 50  0000 C CNN
+F 1 "10k" V 6500 3900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6430 3900 50  0001 C CNN
+F 3 "" H 6500 3900 50  0001 C CNN
+	1    6500 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3300 6750 3300
+Wire Wire Line
+	6500 3300 6500 3350
+Wire Wire Line
+	6500 3650 6500 3750
+Connection ~ 6500 3700
+$Comp
+L GND #PWR405
+U 1 1 59E6EC24
+P 6500 4100
+F 0 "#PWR405" H 6500 3850 50  0001 C CNN
+F 1 "GND" H 6500 3950 50  0000 C CNN
+F 2 "" H 6500 4100 50  0001 C CNN
+F 3 "" H 6500 4100 50  0001 C CNN
+	1    6500 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4100 6500 4050
+$Comp
+L Q_PMOS_GSD Q402
+U 1 1 59E703AF
+P 6950 3400
+F 0 "Q402" H 7150 3450 50  0000 L CNN
+F 1 "AO3401" H 7150 3350 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 7150 3500 50  0001 C CNN
+F 3 "" H 6950 3400 50  0001 C CNN
+	1    6950 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7150 3300 7450 3300
+$Comp
+L R R404
+U 1 1 59E70433
+P 7250 3500
+F 0 "R404" V 7330 3500 50  0000 C CNN
+F 1 "10k" V 7250 3500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7180 3500 50  0001 C CNN
+F 3 "" H 7250 3500 50  0001 C CNN
+	1    7250 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3350 7250 3300
+Connection ~ 7250 3300
+Wire Wire Line
+	6950 3600 6950 4350
+Wire Wire Line
+	6950 3700 7250 3700
+Wire Wire Line
+	7250 3700 7250 3650
+Wire Wire Line
+	5800 3600 6350 3600
+Wire Wire Line
+	6350 3600 6350 4350
+Wire Wire Line
+	6350 4350 6950 4350
+Connection ~ 6950 3700
+Text HLabel 3450 3700 0    60   Output ~ 0
+KEEPALIVE
+Wire Wire Line
+	4350 3700 3450 3700
+$Comp
+L 5050_Serial_RGB U402
+U 1 1 59E8024A
+P 7000 2250
+F 0 "U402" H 6800 2650 60  0000 C CNN
+F 1 "5050_Serial_RGB" H 7000 1850 60  0000 C CNN
+F 2 "LEDs:LED_WS2812B-PLCC4" H 7000 2150 60  0001 C CNN
+F 3 "" H 7000 2150 60  0001 C CNN
+	1    7000 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR404
+U 1 1 59E80397
+P 6450 2550
+F 0 "#PWR404" H 6450 2300 50  0001 C CNN
+F 1 "GND" H 6450 2400 50  0000 C CNN
+F 2 "" H 6450 2550 50  0001 C CNN
+F 3 "" H 6450 2550 50  0001 C CNN
+	1    6450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2550 6450 2450
+Wire Wire Line
+	6450 2450 6550 2450
+Wire Wire Line
+	6050 2050 6550 2050
+Wire Wire Line
+	6550 2250 6050 2250
+Wire Wire Line
+	6050 2250 6050 2600
+Wire Wire Line
+	6050 2600 5800 2600
+NoConn ~ 7450 2250
+Wire Wire Line
+	6050 1800 6050 2050
+Connection ~ 5450 1800
+$EndSCHEMATC
