@@ -38,7 +38,6 @@ LIBS:regulators2
 LIBS:ws2812
 LIBS:mcp73831
 LIBS:switcher-suosemi
-LIBS:esp32_button-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -49,8 +48,8 @@ Date ""
 Rev ""
 Comp ""
 Comment1 ""
-Comment2 ""
-Comment3 ""
+Comment2 "(c) 2017 Google"
+Comment3 "CC-BY 4.0 International"
 Comment4 ""
 $EndDescr
 $Comp
@@ -230,4 +229,6 @@ Wire Wire Line
 Connection ~ 4900 2600
 Wire Wire Line
 	4950 3000 4900 3000
+Text Notes 6950 3700 0    60   ~ 0
+TODO: Document ideal resistor and\ninductor values.
 $EndSCHEMATC

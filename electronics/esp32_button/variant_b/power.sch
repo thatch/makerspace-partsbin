@@ -38,7 +38,6 @@ LIBS:regulators2
 LIBS:ws2812
 LIBS:mcp73831
 LIBS:switcher-suosemi
-LIBS:esp32_button-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -49,8 +48,8 @@ Date ""
 Rev ""
 Comp ""
 Comment1 ""
-Comment2 ""
-Comment3 ""
+Comment2 "(c) 2017 Google"
+Comment3 "CC-BY 4.0 International"
 Comment4 ""
 $EndDescr
 Text HLabel 2800 2300 0    60   Input ~ 0
@@ -151,7 +150,7 @@ L Q_PMOS_GSD Q201
 U 1 1 59E88FDF
 P 3300 2400
 F 0 "Q201" H 3500 2450 50  0000 L CNN
-F 1 "Q_PMOS_GSD" H 3500 2350 50  0000 L CNN
+F 1 "AO3401" H 3500 2350 50  0000 L CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 3500 2500 50  0001 C CNN
 F 3 "" H 3300 2400 50  0001 C CNN
 	1    3300 2400
@@ -173,7 +172,7 @@ L D_Schottky D201
 U 1 1 59E890CF
 P 3700 2800
 F 0 "D201" H 3700 2900 50  0000 C CNN
-F 1 "D_Schottky" H 3700 2700 50  0000 C CNN
+F 1 "BS5918W" H 3700 2700 50  0000 C CNN
 F 2 "Diodes_SMD:D_SOD-123" H 3700 2800 50  0001 C CNN
 F 3 "" H 3700 2800 50  0001 C CNN
 	1    3700 2800

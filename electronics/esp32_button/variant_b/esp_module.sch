@@ -38,7 +38,6 @@ LIBS:regulators2
 LIBS:ws2812
 LIBS:mcp73831
 LIBS:switcher-suosemi
-LIBS:esp32_button-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -49,8 +48,8 @@ Date ""
 Rev ""
 Comp ""
 Comment1 ""
-Comment2 ""
-Comment3 ""
+Comment2 "(c) 2017 Google"
+Comment3 "CC-BY 4.0 International"
 Comment4 ""
 $EndDescr
 $Comp
@@ -340,10 +339,10 @@ F 3 "" H 6350 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X05 J?
+L CONN_01X05 J402
 U 1 1 59E89A66
 P 6600 2950
-F 0 "J?" H 6600 3250 50  0000 C CNN
+F 0 "J402" H 6600 3250 50  0000 C CNN
 F 1 "CONN_01X05" V 6700 2950 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 6600 2950 50  0001 C CNN
 F 3 "" H 6600 2950 50  0001 C CNN
@@ -358,4 +357,8 @@ Text Label 6350 2750 0    60   ~ 0
 IO2
 Text Label 3900 4700 0    60   ~ 0
 IO2
+Text Notes 7250 3000 0    60   ~ 0
+TODO: Better mark 5-pin header on board\nand clean up wiring here.
+Text Notes 2550 3000 0    60   ~ 0
+C403 adds a delay for\npower supply to be stable.
 $EndSCHEMATC
