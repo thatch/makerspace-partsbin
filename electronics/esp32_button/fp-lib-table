@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name ESP32)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/ESP32.pretty)(options "")(descr ""))
-  (lib (name Stepup_Modules)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Stepup_Modules.pretty)(options "")(descr ""))
-)

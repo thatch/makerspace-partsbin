@@ -1,0 +1,10 @@
+(fp_lib_table
+  (lib (name ESP32)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/ESP32.pretty)(options "")(descr ""))
+  (lib (name Stepup_Modules)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/Stepup_Modules.pretty)(options "")(descr ""))
+  (lib (name Connectors2)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/Connectors2.pretty)(options "")(descr ""))
+  (lib (name Inductors2)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/Inductors2.pretty)(options "")(descr ""))
+  (lib (name Capacitors_SMD_Round)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/Capacitors_SMD_Round.pretty)(options "")(descr ""))
+  (lib (name JST_Combo)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/JST_Combo.pretty)(options "")(descr ""))
+  (lib (name Housings_SOIC_EP)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/Housings_SOIC_EP.pretty)(options "")(descr ""))
+  (lib (name Quick_Fit_Tabs)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/Quick_Fit_Tabs.pretty)(options "")(descr ""))
+)

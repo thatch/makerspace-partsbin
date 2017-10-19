@@ -1,0 +1,302 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:switches
+LIBS:esp32
+LIBS:switcher-toppower
+LIBS:ch340
+LIBS:zeropin
+LIBS:stepup_modules
+LIBS:regulators2
+LIBS:ws2812
+LIBS:mcp73831
+LIBS:switcher-suosemi
+LIBS:esp32_button-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 7650 2200 1350 500 
+U 59E66932
+F0 "power" 60
+F1 "power.sch" 60
+F2 "5VIN" I L 7650 2350 60 
+F3 "3V3OUT" O L 7650 2550 60 
+$EndSheet
+$Sheet
+S 3000 3500 1400 1350
+U 59E66ED4
+F0 "usb" 60
+F1 "usb.sch" 60
+F2 "USB5V" O R 4400 3650 60 
+F3 "TXD" I R 4400 4250 60 
+F4 "RXD" I R 4400 4350 60 
+F5 "CHIP_PD" O R 4400 4650 60 
+F6 "IO0" O R 4400 4550 60 
+$EndSheet
+$Sheet
+S 7700 3500 1350 1350
+U 59E6A636
+F0 "esp_module" 60
+F1 "esp_module.sch" 60
+F2 "CHIP_PD" I L 7700 4650 60 
+F3 "IO0" I L 7700 4550 60 
+F4 "3V3_IN" I L 7700 3650 60 
+F5 "TXD" I L 7700 4250 60 
+F6 "RXD" I L 7700 4350 60 
+F7 "BATTV" I L 7700 3900 60 
+F8 "KEEPALIVE" O L 7700 4000 60 
+$EndSheet
+$Comp
+L SYMBOL P103
+U 1 1 59E6F41D
+P 6500 6700
+F 0 "P103" H 6500 6650 60  0000 C CNN
+F 1 "OSHW" H 6500 6750 60  0000 C CNN
+F 2 "Symbols:OSHW-Symbol_8.9x8mm_SilkScreen" H 6500 6700 60  0001 C CNN
+F 3 "" H 6500 6700 60  0001 C CNN
+	1    6500 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SYMBOL P101
+U 1 1 59E6F49B
+P 5900 6700
+F 0 "P101" H 5900 6650 60  0000 C CNN
+F 1 "FID" H 5900 6750 60  0000 C CNN
+F 2 "Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5900 6700 60  0001 C CNN
+F 3 "" H 5900 6700 60  0001 C CNN
+	1    5900 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SYMBOL P104
+U 1 1 59E6F519
+P 6500 7100
+F 0 "P104" H 6500 7050 60  0000 C CNN
+F 1 "HOLE" H 6500 7150 60  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3mm" H 6500 7100 60  0001 C CNN
+F 3 "" H 6500 7100 60  0001 C CNN
+	1    6500 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SYMBOL P102
+U 1 1 59E6F77A
+P 5900 7100
+F 0 "P102" H 5900 7050 60  0000 C CNN
+F 1 "FID" H 5900 7150 60  0000 C CNN
+F 2 "Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5900 7100 60  0001 C CNN
+F 3 "" H 5900 7100 60  0001 C CNN
+	1    5900 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SYMBOL P105
+U 1 1 59E6FAED
+P 6500 7500
+F 0 "P105" H 6500 7450 60  0000 C CNN
+F 1 "HOLE" H 6500 7550 60  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3mm" H 6500 7500 60  0001 C CNN
+F 3 "" H 6500 7500 60  0001 C CNN
+	1    6500 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR102
+U 1 1 59E7EA9C
+P 6850 3500
+F 0 "#PWR102" H 6850 3250 50  0001 C CNN
+F 1 "GND" H 6850 3350 50  0000 C CNN
+F 2 "" H 6850 3500 50  0001 C CNN
+F 3 "" H 6850 3500 50  0001 C CNN
+	1    6850 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW101
+U 1 1 59E7EB09
+P 7050 3200
+F 0 "SW101" H 7100 3300 50  0000 L CNN
+F 1 "SW_Push" H 7050 3140 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_EVQP0" H 7050 3400 50  0001 C CNN
+F 3 "" H 7050 3400 50  0001 C CNN
+	1    7050 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L SW_Push SW102
+U 1 1 59E83A18
+P 6850 3200
+F 0 "SW102" H 6900 3300 50  0000 L CNN
+F 1 "SW_Push" H 6850 3140 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_PTS645" H 6850 3400 50  0001 C CNN
+F 3 "" H 6850 3400 50  0001 C CNN
+	1    6850 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR103
+U 1 1 59E84391
+P 7050 3500
+F 0 "#PWR103" H 7050 3250 50  0001 C CNN
+F 1 "GND" H 7050 3350 50  0000 C CNN
+F 2 "" H 7050 3500 50  0001 C CNN
+F 3 "" H 7050 3500 50  0001 C CNN
+	1    7050 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4550 7700 4550
+Wire Wire Line
+	4400 4250 7700 4250
+Wire Wire Line
+	7700 4350 4400 4350
+Wire Wire Line
+	4400 4650 7700 4650
+Wire Wire Line
+	3700 2550 4650 2550
+Wire Wire Line
+	4650 2550 4650 3650
+Wire Wire Line
+	4650 3650 4400 3650
+Wire Wire Line
+	7700 3650 7500 3650
+Wire Wire Line
+	7500 3650 7500 2550
+Wire Wire Line
+	7500 2550 7650 2550
+Wire Wire Line
+	7350 3900 7700 3900
+Wire Wire Line
+	7350 1200 7350 3900
+Wire Wire Line
+	7700 4000 7250 4000
+Wire Wire Line
+	7250 4000 7250 1350
+Wire Wire Line
+	6850 3500 6850 3400
+Wire Wire Line
+	7050 2850 7050 3000
+Wire Wire Line
+	6850 3000 6850 2850
+Wire Wire Line
+	7050 3500 7050 3400
+$Sheet
+S 3900 950  1300 600 
+U 59E841BF
+F0 "charger" 60
+F1 "charger.sch" 60
+F2 "5V_IN" I L 3900 1200 60 
+F3 "BATT" O R 5200 1200 60 
+$EndSheet
+$Sheet
+S 5500 950  1250 750 
+U 59E84265
+F0 "cut_power" 60
+F1 "cut_power.sch" 60
+F2 "BATT" I L 5500 1200 60 
+F3 "SWITCHED" O R 6750 1200 60 
+F4 "KEEPALIVE" I R 6750 1350 60 
+F5 "~POWERON" I R 6750 1500 60 
+$EndSheet
+$Sheet
+S 7650 1250 1350 650 
+U 59E84304
+F0 "booster" 60
+F1 "booster.sch" 60
+F2 "BATT" I L 7650 1500 60 
+F3 "OUT" O L 7650 1700 60 
+$EndSheet
+Wire Wire Line
+	7650 2350 7500 2350
+Wire Wire Line
+	7500 2350 7500 1700
+Wire Wire Line
+	7500 1700 7650 1700
+$Comp
+L Battery_Cell BT101
+U 1 1 59E8527F
+P 5350 2100
+F 0 "BT101" H 5450 2200 50  0000 L CNN
+F 1 "Battery_Cell" H 5450 2100 50  0000 L CNN
+F 2 "JST_Combo:JST_PH_2_Combo" V 5350 2160 50  0001 C CNN
+F 3 "" V 5350 2160 50  0001 C CNN
+	1    5350 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 1200 6750 1200
+Wire Wire Line
+	7650 1500 7350 1500
+Connection ~ 7350 1500
+Wire Wire Line
+	7250 1350 6750 1350
+Wire Wire Line
+	3700 2550 3700 1200
+Wire Wire Line
+	3700 1200 3900 1200
+Wire Wire Line
+	5200 1200 5500 1200
+Wire Wire Line
+	5350 1900 5350 1200
+Connection ~ 5350 1200
+$Comp
+L GND #PWR101
+U 1 1 59E85B33
+P 5350 2450
+F 0 "#PWR101" H 5350 2200 50  0001 C CNN
+F 1 "GND" H 5350 2300 50  0000 C CNN
+F 2 "" H 5350 2450 50  0001 C CNN
+F 3 "" H 5350 2450 50  0001 C CNN
+	1    5350 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2450 5350 2200
+Wire Wire Line
+	6750 1500 6950 1500
+Wire Wire Line
+	6950 1500 6950 2850
+Connection ~ 6950 2850
+Wire Wire Line
+	6850 2850 7050 2850
+$EndSCHEMATC

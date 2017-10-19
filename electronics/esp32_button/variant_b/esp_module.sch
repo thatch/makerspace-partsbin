@@ -28,20 +28,22 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:switches
 LIBS:esp32
 LIBS:switcher-toppower
 LIBS:ch340
-LIBS:switches
 LIBS:zeropin
 LIBS:stepup_modules
 LIBS:regulators2
 LIBS:ws2812
+LIBS:mcp73831
+LIBS:switcher-suosemi
 LIBS:esp32_button-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -211,10 +213,10 @@ Wire Wire Line
 	6500 3650 6500 3750
 Connection ~ 6500 3700
 $Comp
-L GND #PWR405
+L GND #PWR406
 U 1 1 59E6EC24
 P 6500 4100
-F 0 "#PWR405" H 6500 3850 50  0001 C CNN
+F 0 "#PWR406" H 6500 3850 50  0001 C CNN
 F 1 "GND" H 6500 3950 50  0000 C CNN
 F 2 "" H 6500 4100 50  0001 C CNN
 F 3 "" H 6500 4100 50  0001 C CNN
@@ -279,10 +281,10 @@ F 3 "" H 7000 2150 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR404
+L GND #PWR405
 U 1 1 59E80397
 P 6450 2550
-F 0 "#PWR404" H 6450 2300 50  0001 C CNN
+F 0 "#PWR405" H 6450 2300 50  0001 C CNN
 F 1 "GND" H 6450 2400 50  0000 C CNN
 F 2 "" H 6450 2550 50  0001 C CNN
 F 3 "" H 6450 2550 50  0001 C CNN
@@ -305,4 +307,55 @@ NoConn ~ 7450 2250
 Wire Wire Line
 	6050 1800 6050 2050
 Connection ~ 5450 1800
+Wire Wire Line
+	6400 2850 6300 2850
+Wire Wire Line
+	6300 2850 6300 2700
+Wire Wire Line
+	6300 2700 5800 2700
+Wire Wire Line
+	6400 2950 6300 2950
+Wire Wire Line
+	6300 2950 6300 3000
+Wire Wire Line
+	6300 3000 5800 3000
+Wire Wire Line
+	6400 3150 6350 3150
+Wire Wire Line
+	6350 3150 6350 3250
+Wire Wire Line
+	6250 2050 6250 3050
+Wire Wire Line
+	6250 3050 6400 3050
+Connection ~ 6250 2050
+$Comp
+L GND #PWR404
+U 1 1 59E89676
+P 6350 3250
+F 0 "#PWR404" H 6350 3000 50  0001 C CNN
+F 1 "GND" H 6350 3100 50  0000 C CNN
+F 2 "" H 6350 3250 50  0001 C CNN
+F 3 "" H 6350 3250 50  0001 C CNN
+	1    6350 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X05 J?
+U 1 1 59E89A66
+P 6600 2950
+F 0 "J?" H 6600 3250 50  0000 C CNN
+F 1 "CONN_01X05" V 6700 2950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 6600 2950 50  0001 C CNN
+F 3 "" H 6600 2950 50  0001 C CNN
+	1    6600 2950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4350 4700 3900 4700
+Wire Wire Line
+	6400 2750 6350 2750
+Text Label 6350 2750 0    60   ~ 0
+IO2
+Text Label 3900 4700 0    60   ~ 0
+IO2
 $EndSCHEMATC
