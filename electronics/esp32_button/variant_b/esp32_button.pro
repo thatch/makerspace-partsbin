@@ -1,4 +1,4 @@
-update=Wed 18 Oct 2017 11:08:39 PM PDT
+update=Wed 08 Nov 2017 02:54:16 PM PST
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,16 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -68,3 +78,4 @@ LibName36=../../_kicad_library/regulators2
 LibName37=../../_kicad_library/ws2812
 LibName38=../../_kicad_library/mcp73831
 LibName39=../../_kicad_library/switcher-suosemi
+LibName40=/usr/local/google/home/thatch/goog/makerspace-partsbin/electronics/_kicad_library/switcher-toppower

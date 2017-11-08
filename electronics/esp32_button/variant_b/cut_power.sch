@@ -38,11 +38,12 @@ LIBS:regulators2
 LIBS:ws2812
 LIBS:mcp73831
 LIBS:switcher-suosemi
+LIBS:esp32_button-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 6 6
 Title ""
 Date ""
 Rev ""
@@ -53,9 +54,9 @@ Comment3 "CC-BY 4.0 International"
 Comment4 ""
 $EndDescr
 Text HLabel 4650 2900 0    60   Input ~ 0
-BATT
+IN
 Text HLabel 6400 2900 2    60   Output ~ 0
-SWITCHED
+OUT
 Text HLabel 6400 4200 2    60   Input ~ 0
 KEEPALIVE
 Text HLabel 4650 3400 0    60   Input ~ 0
@@ -105,10 +106,10 @@ F 3 "" H 5350 4200 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR602
+L GND #PWR025
 U 1 1 59E6AE49
 P 5850 3800
-F 0 "#PWR602" H 5850 3550 50  0001 C CNN
+F 0 "#PWR025" H 5850 3550 50  0001 C CNN
 F 1 "GND" H 5850 3650 50  0000 C CNN
 F 2 "" H 5850 3800 50  0001 C CNN
 F 3 "" H 5850 3800 50  0001 C CNN
@@ -164,10 +165,10 @@ Wire Wire Line
 	5250 4400 5250 4800
 Connection ~ 5250 4700
 $Comp
-L GND #PWR601
+L GND #PWR026
 U 1 1 59E6AFF9
 P 5250 4800
-F 0 "#PWR601" H 5250 4550 50  0001 C CNN
+F 0 "#PWR026" H 5250 4550 50  0001 C CNN
 F 1 "GND" H 5250 4650 50  0000 C CNN
 F 2 "" H 5250 4800 50  0001 C CNN
 F 3 "" H 5250 4800 50  0001 C CNN
